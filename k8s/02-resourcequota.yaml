@@ -15,8 +15,8 @@ spec:
     pods: "20"
     persistentvolumeclaims: "2"
     requests.storage: 50Gi
-    services.loadbalancers: "0"     # traffic enters only through the ALB Ingress
-    services.nodeports: "0"
+    services.loadbalancers: "1"     # traffic enters only through the ALB Ingress
+    services.nodeports: "1"
 ---
 # Defaults for any container that doesn't declare resources, so the quota
 # never rejects a pod just because requests/limits were left out.
