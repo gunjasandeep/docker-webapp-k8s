@@ -2,7 +2,7 @@
 # Then open http://localhost:8080 and register a new user to test
 services:
   devopsdb:
-    build: sandeep322/webapp-proj:db
+    image: sandeep322/webapp-proj:db
     environment:
       MYSQL_ROOT_PASSWORD: localrootpass
       MYSQL_USER: vprofile
@@ -13,7 +13,7 @@ services:
       retries: 12
 
   app:
-    build: sandeep322/webapp-proj:app
+    image: sandeep322/webapp-proj:app
     ports:
       - "1234:8080"
     environment:
